@@ -1,5 +1,4 @@
-import { useEffect } from "react";
-import { Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 
 export default function Navbar() {
   // const initialfetch = async () => {
@@ -13,8 +12,19 @@ export default function Navbar() {
   //   initialfetch();
   // }, []);
   return (
-    <View>
+    <View style={style.mainview}>
+      <Text>This is navbar</Text>
+      <Text>This is navbar</Text>
+      <Text>This is navbar</Text>
       <Text>This is navbar</Text>
     </View>
   );
 }
+
+const style = StyleSheet.create({
+  mainview: {
+    margin: "auto",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
+});
