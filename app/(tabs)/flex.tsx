@@ -10,6 +10,9 @@ const flex = () => {
 };
 /// reactnavite ye sab karane ke liye agar flec ko joda jaye to 1 + 1 + 1 + 1 = 4 part me equealy devide hoke hoga
 // justify and the every thing work like stypesheet
+///alignself is indipendneded"
+///wrap jab na samaye tab karana hai 
+/// alignitems not working with the wrap 
 export default flex;
 
 const styles = StyleSheet.create({
