@@ -1,3 +1,4 @@
+import { useAuth } from "@clerk/clerk-expo";
 import React, { useState } from "react";
 import {
   StyleSheet,
@@ -8,6 +9,12 @@ import {
 } from "react-native";
 
 const login = () => {
+  const fetchauthData = async () => {
+    const auth = useAuth();
+    console.log(auth);
+  };
+
+  fetchauthData();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
@@ -19,7 +26,7 @@ const login = () => {
   return (
     <View style={styles.mainview}>
       <View style={styles.signinContent}>
-        <Text style={styles.title}>Sign In</Text>
+        <Text style={styles.title}>Sign In (Securopass) </Text>
 
         <TextInput
           style={styles.input}
