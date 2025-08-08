@@ -13,6 +13,7 @@ const flex = () => {
 ///alignself is indipendneded"
 ///wrap jab na samaye tab karana hai 
 /// alignitems not working with the wrap 
+///flex grow is the 
 export default flex;
 
 const styles = StyleSheet.create({
