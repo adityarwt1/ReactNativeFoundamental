@@ -5,7 +5,8 @@ import { StyleSheet } from "react-native";
 const Loyout = () => {
   return (
     <Tabs>
-      <Tabs.Screen name="hello" options={{ headerShown: false }} />
+      <Tabs.Screen name="add" options={{ headerShown: false, href: null }} />
+      <Tabs.Screen name="Hello" options={{ headerShown: false, href: null }} />
     </Tabs>
   );
 };
