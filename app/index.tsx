@@ -2,15 +2,15 @@ import { Image } from "expo-image";
 import React from "react";
 import {
   Pressable,
+  SafeAreaView,
   StyleSheet,
   Text,
   TouchableOpacity,
-  View,
 } from "react-native";
 
 const index = () => {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Text style={styles.title}>Index Page</Text>
       <Image
         style={{ width: 100, height: 200 }}
@@ -29,7 +29,7 @@ const index = () => {
       >
         <Text>This is the pressable button </Text>
       </Pressable>
-    </View>
+    </SafeAreaView>
   );
 };
 
