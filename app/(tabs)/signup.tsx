@@ -1,4 +1,4 @@
-import { useSignUp } from "@clerk/clerk-expo";
+import { useAuth, useSignUp, useUser } from "@clerk/clerk-expo";
 import { Link, useRouter } from "expo-router";
 import * as React from "react";
 import { Text, TextInput, TouchableOpacity, View } from "react-native";
@@ -7,6 +7,11 @@ export default function SignUpScreen() {
   const { isLoaded, signUp, setActive } = useSignUp();
   const router = useRouter();
 
+  const fetchUserdetail = async () => {
+    console.log(useAuth());
+    console.log(useUser());
+  };
+  fetchUserdetail();
   const [emailAddress, setEmailAddress] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [pendingVerification, setPendingVerification] = React.useState(false);
@@ -16,11 +21,14 @@ export default function SignUpScreen() {
   const onSignUpPress = async () => {
     if (!isLoaded) return;
 
+    console.log(emailAddress, password);
+
     // Start sign-up process using email and password provided
     try {
+      console.log("emain", emailAddress, "password", password);
       await signUp.create({
-        emailAddress,
-        password,
+        emailAddress: emailAddress,
+        password: password,
       });
 
       // Send user an email with verification code
