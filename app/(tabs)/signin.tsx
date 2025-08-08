@@ -24,11 +24,12 @@ const styles = StyleSheet.create({
   signinContent: {
     justifyContent: "center",
     alignItems: "center",
-    borderWidth: 1,
+    borderWidth: 2,
+
     height: 100,
     borderRadius: 10,
     borderColor: "#f",
-    padding: 10,
+    paddingHorizontal: 50, // This is like px-4 in Tailwind
     // Shadow properties for iOS
     shadowColor: "#000",
     shadowOffset: {
