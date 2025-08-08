@@ -1,4 +1,3 @@
-import { Link } from "expo-router";
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
@@ -6,9 +5,6 @@ const index = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Index Page</Text>
-      <Link href="/onboarding">
-        <Text style={styles.link}>Go to Onboarding</Text>
-      </Link>
     </View>
   );
 };
