@@ -1,34 +1,33 @@
-// App.js
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { NavigationContainer } from "@react-navigation/native";
-import * as React from "react";
-import { Text, View } from "react-native";
+import { Link } from "expo-router";
+import React from "react";
+import { StyleSheet, Text, View } from "react-native";
 
-function HomeScreen() {
+const index = () => {
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>🏠 Home Screen</Text>
+    <View style={styles.container}>
+      <Text style={styles.title}>Index Page</Text>
+      <Link href="/onboarding">
+        <Text style={styles.link}>Go to Onboarding</Text>
+      </Link>
     </View>
   );
-}
+};
 
-function ProfileScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>👤 Profile Screen</Text>
-    </View>
-  );
-}
+export default index;
 
-const Tab = createBottomTabNavigator();
-
-export default function App() {
-  return (
-    <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Profile" component={ProfileScreen} />
-      </Tab.Navigator>
-    </NavigationContainer>
-  );
-}
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: "bold",
+  },
+  link: {
+    marginTop: 10,
+    fontSize: 18,
+    color: "blue",
+  },
+});

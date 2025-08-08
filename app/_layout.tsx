@@ -7,7 +7,10 @@ export default function RootLayout() {
     <>
       <ClerkProvider>
         <Navbar />
-        <Stack />
+        <Stack>
+          <Stack.Screen name="/" options={{ headerShown: false }} />
+          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        </Stack>
       </ClerkProvider>
     </>
   );
